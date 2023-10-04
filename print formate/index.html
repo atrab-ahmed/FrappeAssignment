@@ -1,0 +1,17 @@
+    <div class="card">
+      <div class="header">
+        <h2>Membership Card</h2>
+      </div>
+      <div class="content">
+        <div class="avatar">
+        {% set student = frappe.get_doc("Student", doc.student)%}
+          <img src={{student.student_image}} alt="Student Avatar">
+        </div>
+        <div class="info">
+          <p><strong>ID:</strong> {{doc.student}}</p>
+          <p><strong>Name:</strong> {{student.first_name}} {{student.second_name}} </p>
+          <p><strong>From Date:</strong> {{doc.from_date}}</p>
+          <p><strong>To Date:</strong> {{doc.to_date}}</p>
+        </div>
+      </div>
+    </div>
